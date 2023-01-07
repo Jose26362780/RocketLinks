@@ -4,27 +4,27 @@
   box-sizing: border-box;
 }
 :root {
-  --text-color:white;
-  --bg-url:url(./assets/bg-mobile.jpg);
-  --stroke-color:rgba(255, 255, 255, 0.5);
-  --surface-color:rgba(255, 255, 255, 0.05);
-  --surface-color-hover:rgba(255, 255, 255, 0.02);
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
 .light {
-  --text-color:black;
-  --bg-url:url(./assets/bg-mobile-light.jpg);
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 5);
   --stroke-color: rgba(0, 0, 0, 0.5);
-  --surface-color-hover:rgba(255, 255, 255, 0.2);
+  --surface-color-hover: rgba(255, 255, 255, 0.2);
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
-
 }
 
 body {
-  background: var(--bg-url)  no-repeat top center / cover;
+  background: var(--bg-url) no-repeat top center / cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
@@ -34,7 +34,7 @@ body * {
 #container {
   width: 100%;
   /*Para centralizar colocar margin auto*/
-  max-width:588px;
+  max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
@@ -56,15 +56,15 @@ body * {
   margin-top: 8px;
 }
 
-#switch { 
+#switch {
   position: relative;
   width: 64px;
 
-  margin: 4px  auto;
+  margin: 4px auto;
 }
 
 /* switch */
-#switch button { 
+#switch button {
   width: 32px;
   height: 32px;
   background: white var(--switch-bg-url) no-repeat center;
@@ -80,7 +80,6 @@ body * {
 .light #switch button {
   right: 0;
   left: initial;
-
 }
 
 #switch span {
@@ -89,8 +88,8 @@ body * {
   height: 24px;
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
-  backdrop-filter: blur(4px) ;
-  -webkit-backdrop-filter: blur(4px) ;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
 
@@ -150,7 +149,7 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-  background:var(--highlight-color);
+  background: var(--highlight-color);
 }
 
 footer {
@@ -159,4 +158,14 @@ footer {
   font-size: 14px;
 }
 
+/* media queries */
 
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop-dark.jpg);
+  }
+
+  .light {
+    --bg-url: url(./asssets/bg-desktop-light.jpg);
+  }
+}
