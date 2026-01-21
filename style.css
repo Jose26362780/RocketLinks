@@ -56,6 +56,15 @@ body * {
   margin-top: 8px;
 }
 
+#profile span {
+  display: flex;
+  margin: 0 auto;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
 #switch {
   position: relative;
   width: 64px;
@@ -79,7 +88,7 @@ body * {
   animation: slide-back 0.2s;
 }
 .light #switch button {
- animation: slide-in 0.2s forwards;
+  animation: slide-in 0.2s forwards;
 }
 
 #switch button:hover {
@@ -174,25 +183,24 @@ footer {
   }
 }
 
-
 /*animation*/
 /* essa parte do codigo suavisa  a movimentação do 
 modo light para o dark*/
 
 @keyframes slide-in {
-    from{
-      left: 0;
-    }
-    to {
-      left: 50%;
-    }
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
 }
 
 @keyframes slide-back {
-  from{
+  from {
     left: 50%;
   }
-  to{
+  to {
     left: 0;
   }
 }
